@@ -1,0 +1,31 @@
+{
+  "name": "event-bulk-attach",
+  "version": "1.0.0",
+  "description": "Attach events to a listener in bulk",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && NODE_ENV=test node test",
+    "test-cov": "standard && NODE_ENV=test istanbul cover test.js"
+  },
+  "repository": "yoshuawuyts/event-bulk-attach",
+  "keywords": [
+    "events",
+    "emitter",
+    "onnable",
+    "listener",
+    "multi",
+    "attach"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "istanbul": "^0.3.11",
+    "standard": "^3.2.1",
+    "tape": "^3.5.0"
+  },
+  "files": [
+    "LICENSE",
+    "index.js",
+    "README.md"
+  ]
+}

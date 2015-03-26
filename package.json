@@ -1,6 +1,6 @@
 {
   "name": "event-bulk-attach",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Attach events to a listener in bulk",
   "main": "index.js",
   "scripts": {

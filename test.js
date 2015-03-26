@@ -1,11 +1,11 @@
 const EventEmitter = require('events').EventEmitter
 const test = require('tape')
-const index = require('./')
+const attach = require('./')
 
 test('assert input', function (t) {
   t.plan(2)
-  t.throws(index.bind(), 'no args')
-  t.throws(index.bind(null, 1), 'wrong type')
+  t.throws(attach.bind(), 'no args')
+  t.throws(attach.bind(null, 1), 'wrong type')
 })
 
 test('bulk attaches listeners', function (t) {
@@ -14,14 +14,14 @@ test('bulk attaches listeners', function (t) {
     foo: [function () {t.ok(true, 'foo called')}],
     bar: function () {t.ok(true, 'bar called')}
   }
-  const emitter = index(new EventEmitter(), events)
+  const emitter = attach(new EventEmitter(), events)
   emitter.emit('foo')
   emitter.emit('bar')
 })
 
 test('should create a default emitter', function (t) {
   t.plan(1)
-  const emitter = index({
+  const emitter = attach({
     bar: function () {t.ok(true, 'bar called')}
   })
   emitter.emit('bar')
